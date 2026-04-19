@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prachi Wadhwa — DevOps & Cloud Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -20,9 +22,9 @@
   --text3:   #4b5a70;
   --border:  rgba(255,255,255,0.06);
   --border2: rgba(255,255,255,0.1);
-  --syne:    'Syne', sans-serif;
+  --syne:    'Syne', 'Arial Black', sans-serif;
   --inter:   'Inter', sans-serif;
-  --mono:    'JetBrains Mono', monospace;
+  --mono:    'JetBrains Mono', 'Courier New', monospace;
   --r:       12px;
 }
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
@@ -91,9 +93,9 @@ section+section { padding-top:0; }
 .skill-row:hover .pill { background:rgba(0,229,255,.07); border-color:rgba(0,229,255,.2); color:var(--text); }
 .pill.hot { background:rgba(0,229,255,.08); border-color:rgba(0,229,255,.25); color:var(--cyan); }
 .exp-wrap { display:flex; flex-direction:column; gap:16px; }
-.exp-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--r); padding:36px 40px; position:relative; transition:border-color .3s; }
+.exp-card { background:var(--bg2); border:1px solid var(--border); border-left:3px solid var(--cyan); border-radius:var(--r); padding:36px 40px; transition:border-color .3s; }
 .exp-card:hover { border-color:rgba(0,229,255,.2); }
-.exp-accent { position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(180deg,var(--cyan),var(--purple)); }
+.exp-accent { position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(180deg,var(--cyan),var(--purple)); pointer-events:none; }
 .exp-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px; flex-wrap:wrap; gap:10px; }
 .exp-role { font-family:var(--syne); font-size:20px; font-weight:700; color:var(--text); }
 .exp-badge { font-family:var(--mono); font-size:11px; color:var(--cyan); background:rgba(0,229,255,.08); border:1px solid rgba(0,229,255,.2); padding:5px 14px; border-radius:20px; }
@@ -224,7 +226,7 @@ footer strong { color:var(--cyan); font-weight:400; }
     <h2 class="sec-h">Work <em>Experience</em></h2>
     <div class="exp-wrap">
       <div class="exp-card">
-        <div class="exp-accent"></div>
+        
         <div class="exp-top"><div class="exp-role">DevOps Engineer</div><div class="exp-badge">Mar 2025 – Present</div></div>
         <div class="exp-co">Utrade Solutions — FinTech / HFT Platform</div>
         <ul class="exp-list">
@@ -242,7 +244,7 @@ footer strong { color:var(--cyan); font-weight:400; }
         <div class="exp-chips"><span class="chip">CloudFront</span><span class="chip">EKS</span><span class="chip">GitHub Actions</span><span class="chip">Terraform</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">NATS</span><span class="chip">ClickHouse</span><span class="chip">Python</span><span class="chip">Kubernetes</span></div>
       </div>
       <div class="exp-card">
-        <div class="exp-accent"></div>
+        
         <div class="exp-top"><div class="exp-role">DevOps Engineer</div><div class="exp-badge">Jan 2024 – Dec 2024</div></div>
         <div class="exp-co">CloudEQ — Cloud Solutions</div>
         <ul class="exp-list">
