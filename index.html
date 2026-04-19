@@ -306,6 +306,9 @@ footer strong { color:var(--cyan); font-weight:400; }
 </footer>
 
 <script>
+// Show all content immediately as fallback
+document.querySelectorAll(".reveal").forEach(el=>el.classList.add("on"));
+
 const io = new IntersectionObserver(entries => {
   entries.forEach((e,i) => {
     if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('on'),i*80); io.unobserve(e.target); }
