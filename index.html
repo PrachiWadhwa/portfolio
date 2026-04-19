@@ -91,7 +91,7 @@ section+section { padding-top:0; }
 .skill-row:hover .pill { background:rgba(0,229,255,.07); border-color:rgba(0,229,255,.2); color:var(--text); }
 .pill.hot { background:rgba(0,229,255,.08); border-color:rgba(0,229,255,.25); color:var(--cyan); }
 .exp-wrap { display:flex; flex-direction:column; gap:16px; }
-.exp-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--r); padding:36px 40px; position:relative; overflow:hidden; transition:border-color .3s; }
+.exp-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--r); padding:36px 40px; position:relative; transition:border-color .3s; }
 .exp-card:hover { border-color:rgba(0,229,255,.2); }
 .exp-accent { position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(180deg,var(--cyan),var(--purple)); }
 .exp-top { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:4px; flex-wrap:wrap; gap:10px; }
@@ -105,7 +105,7 @@ section+section { padding-top:0; }
 .exp-chips { display:flex; flex-wrap:wrap; gap:6px; margin-top:22px; }
 .chip { font-family:var(--mono); font-size:11px; border:1px solid var(--border2); color:var(--text3); padding:3px 10px; border-radius:4px; }
 .projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
-.proj-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--r); padding:28px; display:flex; flex-direction:column; gap:16px; transition:border-color .2s,transform .25s; position:relative; overflow:hidden; }
+.proj-card { background:var(--bg2); border:1px solid var(--border); border-radius:var(--r); padding:28px; display:flex; flex-direction:column; gap:16px; transition:border-color .2s,transform .25s; position:relative; }
 .proj-card::before { content:''; position:absolute; top:0; left:0; right:0; height:1px; background:linear-gradient(90deg,transparent,var(--cyan),transparent); opacity:0; transition:opacity .3s; }
 .proj-card:hover { border-color:rgba(139,92,246,.35); transform:translateY(-6px); }
 .proj-card:hover::before { opacity:1; }
@@ -134,8 +134,8 @@ section+section { padding-top:0; }
 footer { border-top:1px solid var(--border); padding:32px 0; text-align:center; font-family:var(--mono); font-size:12px; color:var(--text3); }
 footer strong { color:var(--cyan); font-weight:400; }
 @keyframes fadeUp{from{opacity:0;transform:translateY(28px);}to{opacity:1;transform:translateY(0);}}
-.reveal { opacity:0; transform:translateY(24px); transition:opacity .65s ease,transform .65s ease; }
-.reveal.on { opacity:1; transform:translateY(0); }
+
+
 ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--text3);border-radius:3px;}
 @media(max-width:1024px){.hero-inner{grid-template-columns:1fr;}.hero-terminal{display:none;}.projects-grid{grid-template-columns:repeat(2,1fr);}.certs-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:700px){.wrap{padding:0 20px;}.nav-inner{padding:0 20px;}.nav-links{display:none;}.projects-grid{grid-template-columns:1fr;}.certs-grid{grid-template-columns:1fr 1fr;}.skill-cat{min-width:110px;font-size:10px;}.contact-box{padding:48px 24px;}.exp-card{padding:24px 22px;}}
@@ -207,7 +207,7 @@ footer strong { color:var(--cyan); font-weight:400; }
   <div class="wrap">
     <div class="sec-eyebrow">Technical Arsenal</div>
     <h2 class="sec-h">Skills &amp; <em>Stack</em></h2>
-    <div class="skills-wrap reveal">
+    <div class="skills-wrap">
       <div class="skill-row"><div class="skill-cat">Cloud & CDN</div><div class="skill-pills"><span class="pill hot">AWS EC2</span><span class="pill hot">S3</span><span class="pill hot">CloudFront</span><span class="pill hot">IAM</span><span class="pill hot">EKS</span><span class="pill">VPC</span><span class="pill">ACM</span><span class="pill">Lambda@Edge</span><span class="pill">CloudFormation</span><span class="pill">On-Prem</span></div></div>
       <div class="skill-row"><div class="skill-cat">CI/CD & IaC</div><div class="skill-pills"><span class="pill hot">GitHub Actions</span><span class="pill hot">Jenkins</span><span class="pill hot">Docker</span><span class="pill hot">Kubernetes</span><span class="pill">Helm</span><span class="pill">Terraform</span><span class="pill">CloudFormation</span><span class="pill">Nexus</span></div></div>
       <div class="skill-row"><div class="skill-cat">Observability</div><div class="skill-pills"><span class="pill hot">Prometheus</span><span class="pill hot">Grafana</span><span class="pill hot">Loki</span><span class="pill">ClickHouse</span><span class="pill">New Relic</span><span class="pill">Graylog</span><span class="pill">CloudWatch</span><span class="pill">Alertmanager</span></div></div>
@@ -223,7 +223,7 @@ footer strong { color:var(--cyan); font-weight:400; }
     <div class="sec-eyebrow">Work History</div>
     <h2 class="sec-h">Work <em>Experience</em></h2>
     <div class="exp-wrap">
-      <div class="exp-card reveal">
+      <div class="exp-card">
         <div class="exp-accent"></div>
         <div class="exp-top"><div class="exp-role">DevOps Engineer</div><div class="exp-badge">Mar 2025 – Present</div></div>
         <div class="exp-co">Utrade Solutions — FinTech / HFT Platform</div>
@@ -241,7 +241,7 @@ footer strong { color:var(--cyan); font-weight:400; }
         </ul>
         <div class="exp-chips"><span class="chip">CloudFront</span><span class="chip">EKS</span><span class="chip">GitHub Actions</span><span class="chip">Terraform</span><span class="chip">Prometheus</span><span class="chip">Grafana</span><span class="chip">NATS</span><span class="chip">ClickHouse</span><span class="chip">Python</span><span class="chip">Kubernetes</span></div>
       </div>
-      <div class="exp-card reveal">
+      <div class="exp-card">
         <div class="exp-accent"></div>
         <div class="exp-top"><div class="exp-role">DevOps Engineer</div><div class="exp-badge">Jan 2024 – Dec 2024</div></div>
         <div class="exp-co">CloudEQ — Cloud Solutions</div>
@@ -263,12 +263,12 @@ footer strong { color:var(--cyan); font-weight:400; }
     <div class="sec-eyebrow">What I've Built</div>
     <h2 class="sec-h">Key <em>Projects</em></h2>
     <div class="projects-grid">
-      <div class="proj-card reveal"><div class="proj-icon-wrap">🌐</div><div class="proj-name">Portfolio — AWS CloudFront + CI/CD</div><div class="proj-desc">Globally distributed on CloudFront with private S3 origin, OAC, ACM SSL, A+ security headers, CloudFront Functions, and GitHub Actions auto-deploy in under 60 seconds.</div><div class="proj-tech"><span>CloudFront</span><span>S3</span><span>ACM</span><span>GitHub Actions</span><span>IAM</span></div><a href="https://prachi.workplace-profile.in" class="proj-link" target="_blank">↗ Live site</a></div>
-      <div class="proj-card reveal"><div class="proj-icon-wrap">⚡</div><div class="proj-name">JMeter Load Testing Infrastructure</div><div class="proj-desc">Python orchestrator for automated EC2 provisioning, distributed test execution, and teardown. Executed 5,000-user load tests with zero errors and zero manual intervention.</div><div class="proj-tech"><span>Python</span><span>AWS EC2</span><span>JMeter</span><span>Bash</span></div></div>
-      <div class="proj-card reveal"><div class="proj-icon-wrap">📈</div><div class="proj-name">HFT NATS JetStream Observability</div><div class="proj-desc">Integrated HFT NATS library and configured JetStream alerting with dedicated Grafana dashboards for real-time monitoring of high-frequency trading message pipelines.</div><div class="proj-tech"><span>NATS</span><span>Grafana</span><span>Prometheus</span><span>Python</span></div></div>
-      <div class="proj-card reveal"><div class="proj-icon-wrap">🔍</div><div class="proj-name">Full Observability Stack</div><div class="proj-desc">Grafana + Prometheus + Loki + Promtail on Docker with dashboards for NATS JetStream, ClickHouse logs, PostgreSQL data, and service-level health across staging and production.</div><div class="proj-tech"><span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Docker</span></div></div>
-      <div class="proj-card reveal"><div class="proj-icon-wrap">🗄️</div><div class="proj-name">NSE/BSE Market Data Pipeline</div><div class="proj-desc">Automation scripts for NSE and BSE market data upload to S3. Docker-based utility for historical OHLC data ingestion into PostgreSQL with verified production execution.</div><div class="proj-tech"><span>Python</span><span>S3</span><span>PostgreSQL</span><span>Docker</span></div></div>
-      <div class="proj-card reveal"><div class="proj-icon-wrap">📊</div><div class="proj-name">One-Infra DevOps Dashboard</div><div class="proj-desc">SPA consolidating Jenkins, Grafana, Graylog, SonarQube, and Apache Superset into one unified access point. Deployed with Google Auth + MFA + RBAC for secure internal access.</div><div class="proj-tech"><span>JavaScript</span><span>Superset</span><span>Google Auth</span><span>NGINX</span></div></div>
+      <div class="proj-card"><div class="proj-icon-wrap">🌐</div><div class="proj-name">Portfolio — AWS CloudFront + CI/CD</div><div class="proj-desc">Globally distributed on CloudFront with private S3 origin, OAC, ACM SSL, A+ security headers, CloudFront Functions, and GitHub Actions auto-deploy in under 60 seconds.</div><div class="proj-tech"><span>CloudFront</span><span>S3</span><span>ACM</span><span>GitHub Actions</span><span>IAM</span></div><a href="https://prachi.workplace-profile.in" class="proj-link" target="_blank">↗ Live site</a></div>
+      <div class="proj-card"><div class="proj-icon-wrap">⚡</div><div class="proj-name">JMeter Load Testing Infrastructure</div><div class="proj-desc">Python orchestrator for automated EC2 provisioning, distributed test execution, and teardown. Executed 5,000-user load tests with zero errors and zero manual intervention.</div><div class="proj-tech"><span>Python</span><span>AWS EC2</span><span>JMeter</span><span>Bash</span></div></div>
+      <div class="proj-card"><div class="proj-icon-wrap">📈</div><div class="proj-name">HFT NATS JetStream Observability</div><div class="proj-desc">Integrated HFT NATS library and configured JetStream alerting with dedicated Grafana dashboards for real-time monitoring of high-frequency trading message pipelines.</div><div class="proj-tech"><span>NATS</span><span>Grafana</span><span>Prometheus</span><span>Python</span></div></div>
+      <div class="proj-card"><div class="proj-icon-wrap">🔍</div><div class="proj-name">Full Observability Stack</div><div class="proj-desc">Grafana + Prometheus + Loki + Promtail on Docker with dashboards for NATS JetStream, ClickHouse logs, PostgreSQL data, and service-level health across staging and production.</div><div class="proj-tech"><span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Docker</span></div></div>
+      <div class="proj-card"><div class="proj-icon-wrap">🗄️</div><div class="proj-name">NSE/BSE Market Data Pipeline</div><div class="proj-desc">Automation scripts for NSE and BSE market data upload to S3. Docker-based utility for historical OHLC data ingestion into PostgreSQL with verified production execution.</div><div class="proj-tech"><span>Python</span><span>S3</span><span>PostgreSQL</span><span>Docker</span></div></div>
+      <div class="proj-card"><div class="proj-icon-wrap">📊</div><div class="proj-name">One-Infra DevOps Dashboard</div><div class="proj-desc">SPA consolidating Jenkins, Grafana, Graylog, SonarQube, and Apache Superset into one unified access point. Deployed with Google Auth + MFA + RBAC for secure internal access.</div><div class="proj-tech"><span>JavaScript</span><span>Superset</span><span>Google Auth</span><span>NGINX</span></div></div>
     </div>
   </div>
 </section>
@@ -277,7 +277,7 @@ footer strong { color:var(--cyan); font-weight:400; }
   <div class="wrap">
     <div class="sec-eyebrow">Credentials</div>
     <h2 class="sec-h">Certifications &amp; <em>Achievements</em></h2>
-    <div class="certs-grid reveal">
+    <div class="certs-grid">
       <div class="cert-card"><div class="cert-ico">🏆</div><div class="cert-name">New Relic Practitioner</div><div class="cert-sub">Certified 2024</div></div>
       <div class="cert-card"><div class="cert-ico">🏆</div><div class="cert-name">New Relic Advanced Practitioner</div><div class="cert-sub">Certified 2024</div></div>
       <div class="cert-card"><div class="cert-ico">💡</div><div class="cert-name">200+ Problems Solved</div><div class="cert-sub">LeetCode & GeeksforGeeks</div></div>
@@ -288,7 +288,7 @@ footer strong { color:var(--cyan); font-weight:400; }
 
 <section id="contact" class="z1">
   <div class="wrap">
-    <div class="contact-box reveal">
+    <div class="contact-box">
       <div class="sec-eyebrow" style="justify-content:center">Let's Connect</div>
       <h2 class="sec-h" style="margin-bottom:16px">Get In <em>Touch</em></h2>
       <p class="contact-sub">Open to DevOps and Cloud Engineer roles Pan India. If you're building infrastructure that needs to be fast, secure, and automated — let's talk.</p>
@@ -306,15 +306,7 @@ footer strong { color:var(--cyan); font-weight:400; }
 </footer>
 
 <script>
-// Show all content immediately as fallback
-document.querySelectorAll(".reveal").forEach(el=>el.classList.add("on"));
-
-const io = new IntersectionObserver(entries => {
-  entries.forEach((e,i) => {
-    if(e.isIntersecting){ setTimeout(()=>e.target.classList.add('on'),i*80); io.unobserve(e.target); }
-  });
-},{threshold:0.08});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// scroll hint only - no visibility dependency
 </script>
 </body>
 </html>
