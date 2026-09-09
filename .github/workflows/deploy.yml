@@ -27,6 +27,14 @@ jobs:
             --cache-control "max-age=300" \
             --content-type "text/html"
 
+          aws s3 cp main.js s3://prachi-portfolio-bucket/main.js \
+            --cache-control "max-age=300" \
+            --content-type "application/javascript"
+
+          aws s3 cp theme-init.js s3://prachi-portfolio-bucket/theme-init.js \
+            --cache-control "max-age=300" \
+            --content-type "application/javascript"
+
       - name: Invalidate CloudFront cache
         run: |
           aws cloudfront create-invalidation \
